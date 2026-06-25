@@ -1,0 +1,391 @@
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+
+    min-height:100vh;
+
+    background:
+    linear-gradient(
+        rgba(240,255,240,.75),
+        rgba(240,255,240,.75)
+    ),
+    url("../assets/fundo.png");
+
+    background-size:cover;
+    background-position:center;
+
+    color:#145c31;
+}
+
+/* APP */
+
+.app{
+    width:100%;
+    max-width:430px;
+
+    min-height:100vh;
+
+    margin:auto;
+
+    position:relative;
+}
+
+/* HEADER */
+
+header{
+    height:70px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:0 15px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo img{
+    width:42px;
+}
+
+.logo h2{
+    font-size:18px;
+    font-weight:500;
+}
+
+.menu-btn{
+    border:none;
+    background:none;
+
+    font-size:24px;
+
+    cursor:pointer;
+}
+
+/* TITULOS */
+
+.titulo{
+    width:90%;
+
+    margin:25px auto;
+
+    text-align:center;
+
+    font-size:32px;
+    font-weight:800;
+
+    line-height:1.1;
+
+    color:#145c31;
+}
+
+/* FORMULARIOS */
+
+.form{
+    width:90%;
+    margin:auto;
+}
+
+.input{
+    width:100%;
+    height:48px;
+
+    margin-bottom:15px;
+
+    border:none;
+    border-radius:8px;
+
+    background:#eee8f0;
+
+    padding:0 15px;
+
+    box-shadow:0 2px 5px rgba(0,0,0,.15);
+}
+
+.input:focus{
+    outline:2px solid #56b96a;
+}
+
+/* BOTAO */
+
+.btn{
+    width:140px;
+    height:45px;
+
+    display:block;
+
+    margin:20px auto;
+
+    border:none;
+    border-radius:25px;
+
+    background:#ebe3f0;
+
+    color:#555;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    box-shadow:0 3px 8px rgba(0,0,0,.15);
+}
+
+/* SOCIAL */
+
+.social{
+    width:90%;
+    height:48px;
+
+    margin:10px auto;
+
+    border:none;
+    border-radius:25px;
+
+    background:#eee8f0;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:12px;
+
+    box-shadow:0 2px 5px rgba(0,0,0,.15);
+
+    cursor:pointer;
+}
+
+.social img{
+    width:22px;
+}
+
+/* BUSCA HOME */
+
+.search{
+    width:90%;
+
+    margin:auto;
+
+    display:flex;
+    gap:10px;
+}
+
+.search input{
+    flex:1;
+
+    height:50px;
+
+    border:none;
+    border-radius:25px;
+
+    background:#f1ebf3;
+
+    padding-left:15px;
+
+    box-shadow:0 3px 8px rgba(0,0,0,.15);
+}
+
+.search button{
+    width:90px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:#f1ebf3;
+
+    box-shadow:0 3px 8px rgba(0,0,0,.15);
+}
+
+/* CATEGORIAS */
+
+.categorias{
+    width:90%;
+
+    margin:25px auto;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:12px;
+}
+
+.categoria{
+    border:none;
+
+    padding:10px;
+
+    border-radius:20px;
+
+    background:#f1ebf3;
+
+    box-shadow:0 2px 6px rgba(0,0,0,.15);
+}
+
+/* CARDS DESCARTE */
+
+.card{
+    width:95%;
+
+    margin:15px auto;
+
+    background:#eee8f0;
+
+    border-radius:20px;
+
+    padding:12px;
+
+    box-shadow:0 3px 8px rgba(0,0,0,.2);
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.card-info{
+    display:flex;
+    gap:10px;
+}
+
+.card img{
+    width:60px;
+    height:60px;
+
+    border-radius:10px;
+
+    object-fit:cover;
+}
+
+/* PERFIL */
+
+.profile-card{
+    width:92%;
+
+    margin:120px auto 20px;
+
+    background:white;
+
+    border-radius:25px;
+
+    padding:80px 20px 30px;
+
+    box-shadow:0 3px 10px rgba(0,0,0,.2);
+
+    position:relative;
+}
+
+.avatar{
+    width:120px;
+    height:120px;
+
+    border-radius:50%;
+
+    background:#bdf6b9;
+
+    border:4px solid white;
+
+    position:absolute;
+
+    top:-60px;
+    left:50%;
+
+    transform:translateX(-50%);
+}
+
+/* MENU LATERAL */
+
+.sidebar{
+    position:fixed;
+
+    top:0;
+    right:-230px;
+
+    width:230px;
+    height:100vh;
+
+    background:#f4ecf6;
+
+    transition:.3s;
+
+    z-index:1000;
+
+    box-shadow:-4px 0 10px rgba(0,0,0,.2);
+}
+
+.sidebar.active{
+    right:0;
+}
+
+.sidebar nav{
+    display:flex;
+    flex-direction:column;
+
+    margin-top:70px;
+}
+
+.sidebar a{
+    text-decoration:none;
+
+    color:#145c31;
+
+    padding:15px 20px;
+
+    font-size:17px;
+}
+
+.sidebar a:hover{
+    background:#dff3db;
+}
+
+.overlay{
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.3);
+
+    opacity:0;
+    visibility:hidden;
+
+    transition:.3s;
+
+    z-index:999;
+}
+
+.overlay.active{
+    opacity:1;
+    visibility:visible;
+}
+
+/* CELULARES PEQUENOS */
+
+@media (max-width:360px){
+
+    .titulo{
+        font-size:26px;
+    }
+
+    .search{
+        flex-direction:column;
+    }
+
+    .search button{
+        width:100%;
+        height:50px;
+    }
+
+    .categorias{
+        grid-template-columns:1fr;
+    }
+}
