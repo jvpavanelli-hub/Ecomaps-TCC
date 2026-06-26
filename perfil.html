@@ -1,67 +1,104 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perfil</title>
+
 <link rel="stylesheet" href="css/style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="app">
-        
-    <div class="overlay" id="overlay"></div>
+
+<div class="app">
+    <div class="overlay" id="overlay" onclick="fecharMenu()"></div>
 
 <aside class="sidebar" id="sidebar">
 
-    <button class="close-btn" onclick="fecharMenu()">
-        ✕
-    </button>
+    <div class="menu-top">
+        <button class="fechar" onclick="fecharMenu()">✕</button>
+    </div>
 
     <nav>
-        <a href="index.html">🏠 Início</a>
-        <a href="descarte.html">📍 Descartes</a>
-        <a href="sobre.html">ℹ️ Sobre</a>
-        <a href="perfil.html">👤 Conta</a>
-        <a href="login.html">🔑 Login</a>
+        <a href="index.html" class="ativo">
+            <span>🏠</span>
+            <small>Início</small>
+        </a>
+
+        <a href="sobre.html">
+            <span>ℹ️</span>
+            <small>Sobre</small>
+        </a>
+
+        <a href="perfil.html">
+            <span>👤</span>
+            <small>Conta</small>
+        </a>
     </nav>
 
 </aside>
 
-<header style="background:#1d7736;color:white">
+<header class="perfil-header">
+
+<a href="index.html" class="voltar">←</a>
 
 <h2>Profile</h2>
 
+<button class="menu-btn" onclick="abrirMenu()">☰</button>
+
 </header>
 
-<div class="container">
 
-<div class="card">
+<div class="avatar">
 
-<h3 style="text-align:center">
-NomeDoUsuario
-</h3>
-
-<br>
-
-<h4>Email</h4>
-
-<input class="input" value="email@exemplo.com">
-
-<h4>Senha</h4>
-
-<input class="input" value="********">
-
-<button class="btn">
-Editar Perfil
-</button>
-
-<button class="btn">
-Mudar Senha
-</button>
+<img src="assets/user.png">
 
 </div>
 
+
+<section class="perfil-card">
+
+<h3>NomeDoUsuario</h3>
+
+<h2>Informações da conta</h2>
+
+<label>Email</label>
+
+<input type="email" value="Email@exemplo.com">
+
+
+<label>Senha</label>
+
+<input type="password" value="123456789">
+
+
+<button class="btn-verde">
+    Editar Perfil
+</button>
+
+<button class="btn-branco">
+    Mudar Senha
+</button>
+
+<p class="login-link">
+    Já possui uma conta?
+    <a href="login.html">Fazer login</a>
+</p>
+
+<p class="logout">
+    Prefere sair?
+    <a href="login.html">Logout</a>
+</p>
+
+<p class="delete-account">
+    <a href="">Deletar Conta</a>
+</p>
+
+</section>
+
 </div>
-    </div>
 
 <script src="js/menu.js"></script>
 

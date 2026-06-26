@@ -9,20 +9,29 @@
 <body>
     <div class="app">
         
-    <div class="overlay" id="overlay"></div>
+    <div class="overlay" id="overlay" onclick="fecharMenu()"></div>
 
 <aside class="sidebar" id="sidebar">
 
-    <button class="close-btn" onclick="fecharMenu()">
-        ✕
-    </button>
+    <div class="menu-top">
+        <button class="fechar" onclick="fecharMenu()">✕</button>
+    </div>
 
     <nav>
-        <a href="index.html">🏠 Início</a>
-        <a href="descarte.html">📍 Descartes</a>
-        <a href="sobre.html">ℹ️ Sobre</a>
-        <a href="perfil.html">👤 Conta</a>
-        <a href="login.html">🔑 Login</a>
+        <a href="index.html" class="ativo">
+            <span>🏠</span>
+            <small>Início</small>
+        </a>
+
+        <a href="sobre.html">
+            <span>ℹ️</span>
+            <small>Sobre</small>
+        </a>
+
+        <a href="perfil.html">
+            <span>👤</span>
+            <small>Conta</small>
+        </a>
     </nav>
 
 </aside>
